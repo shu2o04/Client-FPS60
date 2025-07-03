@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8CEE92DB-9F87-4658-9B58-215C7319C44E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Main</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>05.Main_9.1</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\..\Client</OutDir>
+    <TargetName>Game</TargetName>
+    <TargetExt>.Tas</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\..\BuildLog\5Main\</OutDir>
+    <IntDir>..\..\..\BuildLog\5Main\</IntDir>
+    <TargetName>Game</TargetName>
+    <TargetExt>.Tas</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;MAIN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MAIN_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <OutputFile>..\..\..\Client\Game.tas</OutputFile>
+    </Link>
+    <Manifest>
+      <AdditionalManifestFiles>..\..\Addon\SPKThemeManiFest.xml %(AdditionalManifestFiles)</AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\Addon\Main_48.ico" />
+    <None Include="BinData\AddressTable1.bin" />
+    <None Include="BinData\AddressTable2.bin" />
+    <None Include="BinData\AddressTable3.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Addon\KeySerial.h" />
+    <ClInclude Include="..\..\PROJECT EMERSON UPDATE 25\Source - Update 25 - PLUS\Main_EX603\Main\detours.h" />
+    <ClInclude Include="..\..\PROJECT EMERSON UPDATE 25\Source - Update 25 - PLUS\Main_EX603\Main\glaux.h" />
+    <ClInclude Include="..\..\Util\CCRC32.H" />
+    <ClInclude Include="AtlansAbbys.h" />
+    <ClInclude Include="BAiFindPath.h" />
+    <ClInclude Include="CameraMove.h" />
+    <ClInclude Include="CBNewUiEx.h" />
+    <ClInclude Include="CBUtil.h" />
+    <ClInclude Include="CustomEarthQuakeSkill.h" />
+    <ClInclude Include="CustomFog.h" />
+    <ClInclude Include="EffectModel.h" />
+    <ClInclude Include="FixAttack.h" />
+    <ClInclude Include="glaux.h" />
+    <ClInclude Include="Interfaces6.h" />
+    <ClInclude Include="ItemMove.h" />
+    <ClInclude Include="SkyBox.h" />
+    <ClInclude Include="SmoothCamera.h" />
+    <ClInclude Include="TAS_ItemLocker.h" />
+    <ClInclude Include="JCSceneCreate.h" />
+    <ClInclude Include="MiniMap.h" />
+    <ClInclude Include="TAS_Harmony.h" />
+    <ClInclude Include="TAS_CashShop.h" />
+    <ClInclude Include="TAS_DungLuyen.h" />
+    <ClInclude Include="TAS_InterSS2.h" />
+    <ClInclude Include="TAS_SoiItemNew.h" />
+    <ClInclude Include="TAS_FixSolution.h" />
+    <ClInclude Include="TAS_Intros.h" />
+    <ClInclude Include="TAS_ItemRong.h" />
+    <ClInclude Include="InterfaceElemental.h" />
+    <ClInclude Include="TAS_DrawFPS.h" />
+    <ClInclude Include="TAS_MocNapNew.h" />
+    <ClInclude Include="TAS_NewVip.h" />
+    <ClInclude Include="TAS_xShop.h" />
+    <ClInclude Include="TAS_Relife.h" />
+    <ClInclude Include="TAS_Invasions.h" />
+    <ClInclude Include="AntiCrack.h" />
+    <ClInclude Include="Antilag.h" />
+    <ClInclude Include="AutoLoginWin.h" />
+    <ClInclude Include="BAntihack.h" />
+    <ClInclude Include="base.h" />
+    <ClInclude Include="BuffIcon.h" />
+    <ClInclude Include="BundleItem.h" />
+    <ClInclude Include="Bytes.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="cape.h" />
+    <ClInclude Include="CB_ArenaPvP.h" />
+    <ClInclude Include="CChatClassic.h" />
+    <ClInclude Include="CChatEx.h" />
+    <ClInclude Include="cCPetRenderMesh.h" />
+    <ClInclude Include="Central.h" />
+    <ClInclude Include="ChaosMachine.h" />
+    <ClInclude Include="CharacterMachine.h" />
+    <ClInclude Include="ChatExpanded.h" />
+    <ClInclude Include="CMacroUIEx.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="CriticalSection.h" />
+    <ClInclude Include="CSCharacterS13.h" />
+    <ClInclude Include="CUIMng.h" />
+    <ClInclude Include="CustomBow.h" />
+    <ClInclude Include="CustomCloak.h" />
+    <ClInclude Include="CustomCommandInfo.h" />
+    <ClInclude Include="CustomEffectRemake.h" />
+    <ClInclude Include="CustomEventTime.h" />
+    <ClInclude Include="CustomFont.h" />
+    <ClInclude Include="CustomGloves.h" />
+    <ClInclude Include="CustomJewelBank.h" />
+    <ClInclude Include="CustomLucChien.h" />
+    <ClInclude Include="CustomLuckySpin.h" />
+    <ClInclude Include="CustomModelFlag.h" />
+    <ClInclude Include="CustomNameColor.h" />
+    <ClInclude Include="CustomPetEffect.h" />
+    <ClInclude Include="CustomPhysicsBody.h" />
+    <ClInclude Include="Extras.h" />
+    <ClInclude Include="FixSkillBeastUppercut.h" />
+    <ClInclude Include="FixSkillDarkSide.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="GuildLogo.h" />
+    <ClInclude Include="GuildUpgrade.h" />
+    <ClInclude Include="HWID.h" />
+    <ClInclude Include="InfoLog.h" />
+    <ClInclude Include="CustomItem.h" />
+    <ClInclude Include="ItemGlow.h" />
+    <ClInclude Include="ItemManager.h" />
+    <ClInclude Include="ItemTooltip.h" />
+    <ClInclude Include="ItemTRSData.h" />
+    <ClInclude Include="CustomItemPrice.h" />
+    <ClInclude Include="CustomJewel.h" />
+    <ClInclude Include="CustomMap.h" />
+    <ClInclude Include="CustomMessage.h" />
+    <ClInclude Include="CustomMonster.h" />
+    <ClInclude Include="CustomMonsterGlow.h" />
+    <ClInclude Include="CustomNpcName.h" />
+    <ClInclude Include="CustomPet.h" />
+    <ClInclude Include="CustomRankUser.h" />
+    <ClInclude Include="CustomWing.h" />
+    <ClInclude Include="Defines.h" />
+    <ClInclude Include="DynamicEffect.h" />
+    <ClInclude Include="Fix.h" />
+    <ClInclude Include="HackCheck.h" />
+    <ClInclude Include="HealthBar.h" />
+    <ClInclude Include="Import.h" />
+    <ClInclude Include="InterEx.h" />
+    <ClInclude Include="Interface.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemInfoEx.h" />
+    <ClInclude Include="ItemRemake.h" />
+    <ClInclude Include="ItemShopValue.h" />
+    <ClInclude Include="ItemSmoke.h" />
+    <ClInclude Include="item_post.h" />
+    <ClInclude Include="JCButton.h" />
+    <ClInclude Include="JCEntryproy.h" />
+    <ClInclude Include="JCOptionBox.h" />
+    <ClInclude Include="JCRendernoItemGlow.h" />
+    <ClInclude Include="LargeRand.h" />
+    <ClInclude Include="linked_list.h" />
+    <ClInclude Include="LoginMainWin.h" />
+    <ClInclude Include="Luna_CNewflag.h" />
+    <ClInclude Include="macro.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="MemScript.h" />
+    <ClInclude Include="MessHacking.h" />
+    <ClInclude Include="MiniMapInfo.h" />
+    <ClInclude Include="MiniMapTron.h" />
+    <ClInclude Include="ModelEffect.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="MonsterBar.h" />
+    <ClInclude Include="MonsterEffect.h" />
+    <ClInclude Include="MonsterGlow.h" />
+    <ClInclude Include="MonsterHpBar.h" />
+    <ClInclude Include="MuHelper.h" />
+    <ClInclude Include="MultiSelect.h" />
+    <ClInclude Include="mu_object_chat_data.h" />
+    <ClInclude Include="mu_object_item_data.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="NewUIButton.h" />
+    <ClInclude Include="NewUIMainFrame.h" />
+    <ClInclude Include="NewUIMyInventory.h" />
+    <ClInclude Include="NewUISystem.h" />
+    <ClInclude Include="NPC.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Offset.h" />
+    <ClInclude Include="OffTrade.h" />
+    <ClInclude Include="PacketManager.h" />
+    <ClInclude Include="PartyBar.h" />
+    <ClInclude Include="PartyBuffs.h" />
+    <ClInclude Include="PartySearch.h" />
+    <ClInclude Include="PartySearchSettings.h" />
+    <ClInclude Include="Pet.h" />
+    <ClInclude Include="PetHook.h" />
+    <ClInclude Include="PetMontura.h" />
+    <ClInclude Include="PetProtocol.h" />
+    <ClInclude Include="postInterface.h" />
+    <ClInclude Include="post_item.h" />
+    <ClInclude Include="PrintPlayer.h" />
+    <ClInclude Include="Protect.h" />
+    <ClInclude Include="Protocol.h" />
+    <ClInclude Include="Reconnect.h" />
+    <ClInclude Include="ScriptItem.h" />
+    <ClInclude Include="TAS_CongPoint.h" />
+    <ClInclude Include="TAS_CtcMini.h" />
+    <ClInclude Include="TAS_ItemTrader.h" />
+    <ClInclude Include="TAS_SoiItem.h" />
+    <ClInclude Include="range.h" />
+    <ClInclude Include="Ranking.h" />
+    <ClInclude Include="ReadScript.h" />
+    <ClInclude Include="RegisterForm.h" />
+    <ClInclude Include="TAS_ResetChange.h" />
+    <ClInclude Include="Resolution.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Rotate360Character.h" />
+    <ClInclude Include="SEASON3B.h" />
+    <ClInclude Include="ServerListMove.h" />
+    <ClInclude Include="SItemOption.h" />
+    <ClInclude Include="TAS_CharacterList.h" />
+    <ClInclude Include="TAS_CongHuongV2.h" />
+    <ClInclude Include="TAS_DameBoss.h" />
+    <ClInclude Include="TAS_DameRender.h" />
+    <ClInclude Include="TAS_DanhHieu.h" />
+    <ClInclude Include="TAS_DrawBoxAtm.h" />
+    <ClInclude Include="TAS_HonHoan.h" />
+    <ClInclude Include="TAS_MobileAvt.h" />
+    <ClInclude Include="TAS_PKSystem.h" />
+    <ClInclude Include="TAS_QuanHam.h" />
+    <ClInclude Include="TAS_ThanMa.h" />
+    <ClInclude Include="TAS_ToolKit.h" />
+    <ClInclude Include="TAS_TuChan.h" />
+    <ClInclude Include="StaticEffect.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TAS_ChangePass.h" />
+    <ClInclude Include="ThueFlag.h" />
+    <ClInclude Include="TMemory.h" />
+    <ClInclude Include="ToolKit.h" />
+    <ClInclude Include="TrayModeNew.h" />
+    <ClInclude Include="UIControl.h" />
+    <ClInclude Include="UITextInputBox.h" />
+    <ClInclude Include="User.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="ViewCharItem.h" />
+    <ClInclude Include="VirtualMachine.h" />
+    <ClInclude Include="Widescreen.h" />
+    <ClInclude Include="WindowsStruct.h" />
+    <ClInclude Include="WSclient.h" />
+    <ClInclude Include="Wsclientline.h" />
+    <ClInclude Include="w_ObjectInfo.h" />
+    <ClInclude Include="zzzmathlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Util\CCRC32.Cpp" />
+    <ClCompile Include="AtlansAbbys.cpp" />
+    <ClCompile Include="BAiFindPath.cpp" />
+    <ClCompile Include="CameraMove.cpp" />
+    <ClCompile Include="CBNewUiEx.cpp" />
+    <ClCompile Include="CBUtil.cpp" />
+    <ClCompile Include="CustomEarthQuakeSkill.cpp" />
+    <ClCompile Include="CustomFog.cpp" />
+    <ClCompile Include="EffectModel.cpp" />
+    <ClCompile Include="FixAttack.cpp" />
+    <ClCompile Include="Interfaces6.cpp" />
+    <ClCompile Include="ItemMove.cpp" />
+    <ClCompile Include="SkyBox.cpp" />
+    <ClCompile Include="SmoothCamera.cpp" />
+    <ClCompile Include="TAS_ItemLocker.cpp" />
+    <ClCompile Include="JCSceneCreate.cpp" />
+    <ClCompile Include="MiniMap.cpp" />
+    <ClCompile Include="TAS_Harmony.cpp" />
+    <ClCompile Include="TAS_CashShop.cpp" />
+    <ClCompile Include="TAS_DungLuyen.cpp" />
+    <ClCompile Include="TAS_InterSS2.cpp" />
+    <ClCompile Include="TAS_SoiItemNew.cpp" />
+    <ClCompile Include="TAS_FixSolution.cpp" />
+    <ClCompile Include="TAS_Intros.cpp" />
+    <ClCompile Include="TAS_ItemRong.cpp" />
+    <ClCompile Include="InterfaceElemental.cpp" />
+    <ClCompile Include="TAS_DrawFPS.cpp" />
+    <ClCompile Include="TAS_MocNapNew.cpp" />
+    <ClCompile Include="TAS_NewVip.cpp" />
+    <ClCompile Include="TAS_xShop.cpp" />
+    <ClCompile Include="TAS_Relife.cpp" />
+    <ClCompile Include="TAS_Invasions.cpp" />
+    <ClCompile Include="AntiCrack.cpp" />
+    <ClCompile Include="Antilag.cpp" />
+    <ClCompile Include="AutoLoginWin.cpp" />
+    <ClCompile Include="BAntihack.cpp" />
+    <ClCompile Include="BuffIcon.cpp" />
+    <ClCompile Include="BundleItem.cpp" />
+    <ClCompile Include="Bytes.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="cape.cpp" />
+    <ClCompile Include="CB_ArenaPvP.cpp" />
+    <ClCompile Include="CChatClassic.cpp" />
+    <ClCompile Include="CChatEx.cpp" />
+    <ClCompile Include="cCPetRenderMesh.cpp" />
+    <ClCompile Include="Central.cpp" />
+    <ClCompile Include="ChaosMachine.cpp" />
+    <ClCompile Include="CharacterMachine.cpp" />
+    <ClCompile Include="ChatExpanded.cpp" />
+    <ClCompile Include="CMacroUIEx.cpp" />
+    <ClCompile Include="Common.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="CriticalSection.cpp" />
+    <ClCompile Include="CSCharacterS13.cpp" />
+    <ClCompile Include="CUIMng.cpp" />
+    <ClCompile Include="CustomBow.cpp" />
+    <ClCompile Include="CustomCloak.cpp" />
+    <ClCompile Include="CustomCommandInfo.cpp" />
+    <ClCompile Include="CustomEffectRemake.cpp" />
+    <ClCompile Include="CustomEventTime.cpp" />
+    <ClCompile Include="CustomFont.cpp" />
+    <ClCompile Include="CustomGloves.cpp" />
+    <ClCompile Include="CustomJewelBank.cpp" />
+    <ClCompile Include="CustomLucChien.cpp" />
+    <ClCompile Include="CustomLuckySpin.cpp" />
+    <ClCompile Include="CustomModelFlag.cpp" />
+    <ClCompile Include="CustomNameColor.cpp" />
+    <ClCompile Include="CustomPetEffect.cpp" />
+    <ClCompile Include="CustomPhysicsBody.cpp" />
+    <ClCompile Include="Extras.cpp" />
+    <ClCompile Include="FixSkillBeastUppercut.cpp" />
+    <ClCompile Include="FixSkillDarkSide.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="GuildLogo.cpp" />
+    <ClCompile Include="GuildUpgrade.cpp" />
+    <ClCompile Include="HWID.cpp" />
+    <ClCompile Include="InfoLog.cpp" />
+    <ClCompile Include="CustomItem.cpp" />
+    <ClCompile Include="ItemGlow.cpp" />
+    <ClCompile Include="ItemManager.cpp" />
+    <ClCompile Include="ItemTooltip.cpp" />
+    <ClCompile Include="ItemTRSData.cpp" />
+    <ClCompile Include="CustomItemPrice.cpp" />
+    <ClCompile Include="CustomJewel.cpp" />
+    <ClCompile Include="CustomMap.cpp" />
+    <ClCompile Include="CustomMessage.cpp" />
+    <ClCompile Include="CustomMonster.cpp" />
+    <ClCompile Include="CustomMonsterGlow.cpp" />
+    <ClCompile Include="CustomNpcName.cpp" />
+    <ClCompile Include="CustomPet.cpp" />
+    <ClCompile Include="CustomRankUser.cpp" />
+    <ClCompile Include="CustomWing.cpp" />
+    <ClCompile Include="DynamicEffect.cpp" />
+    <ClCompile Include="Fix.cpp" />
+    <ClCompile Include="HackCheck.cpp" />
+    <ClCompile Include="HealthBar.cpp" />
+    <ClCompile Include="InterEx.cpp" />
+    <ClCompile Include="Interface.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemInfoEx.cpp" />
+    <ClCompile Include="ItemRemake.cpp" />
+    <ClCompile Include="ItemShopValue.cpp" />
+    <ClCompile Include="ItemSmoke.cpp" />
+    <ClCompile Include="JCButton.cpp" />
+    <ClCompile Include="JCOptionBox.cpp" />
+    <ClCompile Include="JCRendernoItemGlow.cpp" />
+    <ClCompile Include="LargeRand.cpp" />
+    <ClCompile Include="LoginMainWin.cpp" />
+    <ClCompile Include="Luna_CNewflag.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MemScript.cpp" />
+    <ClCompile Include="MiniMapInfo.cpp" />
+    <ClCompile Include="MiniMapTron.cpp" />
+    <ClCompile Include="ModelEffect.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="MonsterBar.cpp" />
+    <ClCompile Include="MonsterEffect.cpp" />
+    <ClCompile Include="MonsterGlow.cpp" />
+    <ClCompile Include="MonsterHpBar.cpp" />
+    <ClCompile Include="MuHelper.cpp" />
+    <ClCompile Include="MultiSelect.cpp" />
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="NewUIButton.cpp" />
+    <ClCompile Include="NewUIMainFrame.cpp" />
+    <ClCompile Include="NewUIMyInventory.cpp" />
+    <ClCompile Include="NewUISystem.cpp" />
+    <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="OffTrade.cpp" />
+    <ClCompile Include="PacketManager.cpp" />
+    <ClCompile Include="PartyBar.cpp" />
+    <ClCompile Include="PartyBuffs.cpp" />
+    <ClCompile Include="PartySearch.cpp" />
+    <ClCompile Include="PartySearchSettings.cpp" />
+    <ClCompile Include="Pet.cpp" />
+    <ClCompile Include="PetHook.cpp" />
+    <ClCompile Include="PetMontura.cpp" />
+    <ClCompile Include="PetProtocol.cpp" />
+    <ClCompile Include="postInterface.cpp" />
+    <ClCompile Include="post_item.cpp" />
+    <ClCompile Include="PrintPlayer.cpp" />
+    <ClCompile Include="Protect.cpp" />
+    <ClCompile Include="Protocol.cpp" />
+    <ClCompile Include="Reconnect.cpp" />
+    <ClCompile Include="TAS_CongPoint.cpp" />
+    <ClCompile Include="TAS_CtcMini.cpp" />
+    <ClCompile Include="TAS_ItemTrader.cpp" />
+    <ClCompile Include="TAS_SoiItem.cpp" />
+    <ClCompile Include="Ranking.cpp" />
+    <ClCompile Include="RegisterForm.cpp" />
+    <ClCompile Include="TAS_ResetChange.cpp" />
+    <ClCompile Include="Resolution.cpp" />
+    <ClCompile Include="Rotate360Character.cpp" />
+    <ClCompile Include="ServerListMove.cpp" />
+    <ClCompile Include="SItemOption.cpp" />
+    <ClCompile Include="TAS_CharacterList.cpp" />
+    <ClCompile Include="TAS_CongHuongV2.cpp" />
+    <ClCompile Include="TAS_DameBoss.cpp" />
+    <ClCompile Include="TAS_DameRender.cpp" />
+    <ClCompile Include="TAS_DanhHieu.cpp" />
+    <ClCompile Include="TAS_DrawBoxAtm.cpp" />
+    <ClCompile Include="TAS_EventClick.cpp" />
+    <ClCompile Include="TAS_HonHoan.cpp" />
+    <ClCompile Include="TAS_MobileAvt.cpp" />
+    <ClCompile Include="TAS_PKSystem.cpp" />
+    <ClCompile Include="TAS_QuanHam.cpp" />
+    <ClCompile Include="TAS_ThanMa.cpp" />
+    <ClCompile Include="TAS_ToolKit.cpp" />
+    <ClCompile Include="TAS_TuChan.cpp" />
+    <ClCompile Include="StaticEffect.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TAS_ChangePass.cpp" />
+    <ClCompile Include="ThueFlag.cpp" />
+    <ClCompile Include="TMemory.cpp" />
+    <ClCompile Include="ToolKit.cpp" />
+    <ClCompile Include="TrayModeNew.cpp" />
+    <ClCompile Include="UIControl.cpp" />
+    <ClCompile Include="UITextInputBox.cpp" />
+    <ClCompile Include="User.cpp" />
+    <ClCompile Include="Util.cpp" />
+    <ClCompile Include="ViewCharItem.cpp" />
+    <ClCompile Include="VirtualMachine.cpp" />
+    <ClCompile Include="Widescreen.cpp" />
+    <ClCompile Include="WindowsStruct.cpp" />
+    <ClCompile Include="WSclient.cpp" />
+    <ClCompile Include="Wsclientline.cpp" />
+    <ClCompile Include="zzzmathlib.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Main.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\PROJECT EMERSON UPDATE 25\Source - Update 25 - PLUS\Main_EX603\Main\detours.lib" />
+    <Library Include="..\..\PROJECT EMERSON UPDATE 25\Source - Update 25 - PLUS\Main_EX603\Main\Glaux.lib" />
+    <Library Include="wzMUQuiz.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
